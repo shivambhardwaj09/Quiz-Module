@@ -1,0 +1,250 @@
+:root {
+    --color-primary: linear-gradient(to right, #ebc4e7, #9256f3);
+    --color-secondary: rgb(238, 248, 95);
+    --color-white: rgb(255, 228, 228);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+body {
+    background: var(--color-primary);
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    padding: 6px 0;
+    background: #000;
+    opacity: 0.6;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+section {
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.start-box {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    background-color: var(--color-white);
+    width: 500px;
+    padding: 2em 1em;
+    border: 6px solid rgb(123, 101, 245, 0.4);
+}
+
+.start-box li {
+    margin: 1em 0;
+    list-style-type: disc;
+}
+
+.start-box button {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.quiz-body {
+    margin: 2em 10em auto;
+    padding: 2em 1em;
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.144);
+    border-radius: 4px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.144);
+}
+
+.quiz-question {
+    background: linear-gradient(to left, rgb(150, 205, 241), rgb(154, 190, 236));
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.144);
+    padding: 1rem 0.5rem;
+    border-radius: 3px;
+    word-spacing: 3px;
+    font-size: 1.1rem;
+    color: rgb(95, 27, 27);
+}
+
+.quiz-question span {
+    color: rgb(77, 39, 82);
+}
+
+.quiz-question-options {
+    position: relative;
+    margin: 1.5em 0 1em 1em;
+    font-size: 1.2rem;
+}
+
+.option input[type="radio"] {
+
+    position: absolute;
+}
+
+.option label {
+    display: flex-inline;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.option {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.option::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -0.2em;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.1;
+}
+
+.custom-checkbox {
+    --size: 0.50em;
+
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    margin-right: var(--size);
+    cursor: pointer;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.option:hover .custom-checkbox,
+input[type="radio"]:focus + label .custom-checkbox {
+    transform: scale(1.2);
+    color: var(--color-secondary);
+}
+
+input[type="radio"]:checked + label .custom-checkbox {
+    background: rgb(216, 82, 5);
+    border: 2px solid rgb(255, 0, 179);
+}
+
+input[type="radio"]:checked + label {
+    opacity: 0.7;
+}
+
+.quiz-question-answered-status {
+    margin: 1em 0 1em 0;
+    width: 110px;
+    text-align: center;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    border-radius: 4px;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn,
+.quiz-buttons .btn {
+    width: 80px;
+    padding: 0.1rem 0.1rem;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border: none;
+    transform: scale(1);
+    transition: 50ms transform ease-in-out;
+}
+
+.btn:focus,
+.quiz-buttons .btn:focus {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.144);
+    outline: none;
+}
+
+.btn:active,
+.quiz-buttons .btn:active {
+    transform: scale(0.9);
+}
+
+.start-btn {
+    background-color: rgb(123, 101, 245);
+
+}
+
+.next-btn {
+    background-color: rgb(101, 245, 101);
+}
+
+.clear-btn {
+    background-color: rgb(243, 241, 150);
+}
+
+.submit-btn {
+    background-color: rgb(253, 170, 145);
+}
+
+.restart-btn {
+    background-color: rgb(253, 170, 145);
+}
+
+.score-btn {
+    background-color: rgb(253, 170, 145);
+}
+
+.answer-key-container-title  {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.answer-key-container-title span,
+.answer-key-container-title button {
+    margin-left: 10em;
+}
+
+.answer-key-container-title button {
+    margin-top: 1rem;
+}
+
+.answer-key-container {
+    margin: 1em 10em auto;
+    padding: 2em 3em;
+    font-size: 1.1rem;
+    word-spacing: 3px;
+    color: rgb(161, 39, 39);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.144);
+}
+
+.list-parent-li {
+    margin-bottom: 1rem;
+    list-style-type: square;
+}
+
+.list-parent-li-span {
+    background: lightgreen;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 4px;
+}

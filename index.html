@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/web-icon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quiz Module</title>
+</head>
+
+<body>
+    <header class="quiz-title">
+        <h2 id="quiz-title">Quiz</h2>
+    </header>
+    <!-- <section class="create-quiz" data-create-quiz>
+            <a href="/">Click here to create your own quiz</a>
+        </section> -->
+    <section>
+        <div class="start-box" quiz-start-container>
+            Rules:
+            <ol>
+                <li>Please click on the start button to start the quiz.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            </ol>
+            <button class="start-btn btn" quiz-start-button>Start</button>
+        </div>
+        <div class="hide quiz-body" data-quiz-body>
+            <div class="quiz-question">
+                Ques:
+                <span data-quiz-question>A complete graph can have </span>
+                ?
+            </div>
+            <div class="quiz-question-options" data-quiz-question-options>
+
+                <div class="option" data-option>
+                    <input type="checkbox" id="task-1" />
+                    <label for="task-1">
+                        <span class="custom-checkbox"></span>
+                        Javascript
+                    </label>
+                </div>
+
+                <div class="option" data-option>
+                    <input type="checkbox" id="task-2" />
+                    <label for="task-2">
+                        <span class="custom-checkbox"></span>
+                        Java
+                    </label>
+                </div>
+
+                <div class="option" data-option>
+                    <input type="checkbox" id="task-3" />
+                    <label for="task-3">
+                        <span class="custom-checkbox"></span>
+                        HTML
+                    </label>
+                </div>
+
+                <div class="option" data-option>
+                    <input type="checkbox" id="task-4" />
+                    <label for="task-4">
+                        <span class="custom-checkbox"></span>
+                        None of these
+                    </label>
+                </div>
+
+            </div>
+            <div class="quiz-question-answered-status hide" data-quiz-question-answered-status>
+                <p id="status"></p>
+            </div>
+            <div class="quiz-buttons">
+                <button class="next-btn btn" type="click" quiz-question-next>Next</button>
+                <button class="clear-btn btn" type="click" quiz-question-clear>Reset</button>
+                <button class="submit-btn btn" type="click" quiz-question-submit>Submit</button>
+                <button class="score-btn btn hide" quiz-score-button>Score</button>
+            </div>
+        </div>
+        <div class="answer-key-container-title hide" answer-key-container>
+            <span>Answer Key</span>
+            <div class="answer-key-container" >
+                <ol list-parent>
+                    
+                </ol>
+            </div>
+            <button class="restart-btn btn hide" quiz-restart-button>Restart</button>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
